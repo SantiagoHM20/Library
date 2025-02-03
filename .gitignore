@@ -1,0 +1,19 @@
+# Directorios y archivos compilados por Java
+target/
+*.class
+
+# Directorios y archivos del sistema
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+*.iws
+
+# Archivos de logs
+*.log
+
+# Archivos generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
