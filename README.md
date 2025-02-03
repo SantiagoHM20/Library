@@ -41,3 +41,8 @@ user
 ![image](Assets/tree.png)
 
 ## AGREGAR CLASES
+
+
+Para validar que la estructura del proyecto está bien se debe compilar usando el comando package.
+
+![Image](Assets/Package%20comando.png)
