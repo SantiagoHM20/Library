@@ -7,6 +7,11 @@ Apache Maven: 3.9.x
 JUnit: 5.x.x
 Docker
 
+## INTEGRANTES
+
+Santiago Hurtado
+Andres Calderon
+
 ## OBJETIVOS
 Como hacer pruebas unitarias.
 Utilizar anotaciones @Test del framework JUnit
