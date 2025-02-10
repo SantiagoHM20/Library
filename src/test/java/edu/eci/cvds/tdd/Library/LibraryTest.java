@@ -78,4 +78,24 @@ class LibraryTest {
         boolean operation = library.addUser(user1);
         assertTrue(operation);
     }
+
+    @Test
+    void shouldNotAddBook(){
+        boolean operation = library.addBook(null);
+        assertEquals(false,operation);
+    }
+
+    @Test
+    void shouldReturnNullWhenUserNotFound() {
+        User user = library.findUser("3785683476583");
+
+        assertNull(user);
+    }
+
+    @Test
+    void shouldReturnNullWhenBookNotFound() {
+        Book book = library.findBook("0293850249");
+
+        assertNull(book);
+    }
 }
