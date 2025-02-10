@@ -54,10 +54,10 @@ class LibraryTest {
         library.addUser(new User("johnDoe","1000095435"));
         library.addBook(book2); // Suponiendo que `book2` tiene ISBN "123"
 
-        Loan loan = library.loanABook("1000095435", "123");
+        Loan loan = library.loanABook("1000095435", "1234");
 
-        //assertNotNull(loan);
-        //assertEquals(LoanStatus.ACTIVE, loan.getStatus());
+        assertNotNull(loan);
+        assertEquals(LoanStatus.ACTIVE, loan.getStatus());
     }
 
     @Test
@@ -65,12 +65,12 @@ class LibraryTest {
         library.addUser(new User("johnDoe","1000095435"));
         library.addBook(book2);
 
-        Loan loan2 = library.loanABook("1000095436", "123");
-        //assertNotNull(loan2); // Validación previa para evitar NullPointerException
+        Loan loan2 = library.loanABook("1000095435", "1234");
+        assertNotNull(loan2); // Validación previa para evitar NullPointerException
 
         library.returnLoan(loan2);
 
-        //assertEquals(LoanStatus.RETURNED, loan2.getStatus());
+        assertEquals(LoanStatus.RETURNED, loan2.getStatus());
     }
 
     @Test
