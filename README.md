@@ -75,3 +75,5 @@ Ahora al compilar el proyecto en la carpeta target se debe crear una carpeta con
 Explore los links del reporte en el cual le muestra que partes del código tienen prueba y cuales no.
 
 ![image](Assets/Index.png)
+
+![image](Assets/Index2.png)
