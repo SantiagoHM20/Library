@@ -7,6 +7,10 @@ Apache Maven: 3.9.x
 JUnit: 5.x.x
 Docker
 
+#### Integrantes
+Andrés Felipe Calderón
+Santiago Hurtado
+
 ## OBJETIVOS
 Como hacer pruebas unitarias.
 Utilizar anotaciones @Test del framework JUnit
@@ -77,3 +81,55 @@ Explore los links del reporte en el cual le muestra que partes del código tiene
 ![image](Assets/Index.png)
 
 ![image](Assets/Index2.png)
+
+## SONARQUBE
+
+Ahora es necesario hacer el análisis estático del código usando SonarQube, para lo cual necesitamos tener Docker.
+
+
+Para lo cual se debe descargar la imagen de docker con el siguiente comando docker pull sonarqube
+
+
+Ahora se debe arrancar el servicio de SonarQube con el siguiente comando docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
+
+![image](Assets/Docker.png)
+
+Validar funcionamiento docker ps -a
+![image](Assets/dockerPs-a.png)
+
+Iniciar sesión en sonar localhost:9000 cambiar la clave por defecto usuario y contraseña es admin.
+
+![image](Assets/sonar.png)
+
+Entrar a las opciones de la cuenta.
+
+
+Account -> settings -> generate token.
+
+
+Una vez sonar este corriendo deben generar un token
+
+![image](Assets/token.png)
+
+Instale sonarLint en el IDE que este manejando.
+
+![image](Assets/sonarEnIDE.png)
+
+
+Añada el plugin de Sonar en el archivo pom del proyecto.
+
+![image](Assets/pluginSonar.png)
+![image](Assets/Dependencias.png)
+
+Construya el proyecto, genere el reporte de JACOCO y corrija el cubrimiento de las pruebas de unidad para que su proyecto se construya adecuadamente.
+
+
+genere la integración con sonar mvn verify sonar:sonar -D sonar.token="[TOKEN_GENERADO]"
+
+![image](Assets/SonarTest.png)
+![image](Assets/BuildSonar.png)
+
+#### _Al ejecutar ese comando pasó lo siguiente en el IDE:_
+
+![image](Assets/IDE.png)
+
