@@ -1,10 +1,16 @@
 # LABORATORIO 3 - TDD
 TALLER 3
+
 Testing - TDD
+
 PRE-RREQUISITOS
+
 Java OpenJDK Runtime Environment: 17.x.x
+
 Apache Maven: 3.9.x
+
 JUnit: 5.x.x
+
 Docker
 
 #### Integrantes
