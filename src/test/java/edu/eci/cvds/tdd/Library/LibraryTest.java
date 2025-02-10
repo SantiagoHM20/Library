@@ -86,6 +86,20 @@ class LibraryTest {
     }
 
     @Test
+    void shouldReturnNullWhenUserDoesNotExist() {
+        library.addBook(book2);
+        Loan loan = library.loanABook("9999", "1234");
+        assertNull(loan);
+    }
+
+    @Test
+    void shouldReturnNullWhenBookDoesNotExist() {
+        library.addUser(user1);
+        library.addBook(book2);
+        Loan loan = library.loanABook("alex123@gmail.com", "9999999");
+        assertNull(loan);
+    }
+    @Test
     void shouldReturnNullWhenUserNotFound() {
         User user = library.findUser("3785683476583");
 
@@ -97,5 +111,11 @@ class LibraryTest {
         Book book = library.findBook("0293850249");
 
         assertNull(book);
+    }
+
+    @Test
+    void shouldReturnNullIfLoanIsNull() {
+        Loan result = library.returnLoan(null);
+        assertNull(result);
     }
 }
